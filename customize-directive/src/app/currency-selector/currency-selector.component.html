@@ -1,0 +1,11 @@
+<div class="selector">
+    <label *ngFor="let currencyName of currencyNames">
+      <input
+        type="radio"
+        name="currency-selector"
+        id="selector-{{currencyName}}"
+        [value]="currencyName"
+        [checked]="currentCurrencyName == currencyName"
+        (change)="onChange($event)"><span>{{ currencyNames }}</span>
+    </label>
+  </div>
